@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Firmas Huesped</title>
+</head>
+<body>
+	<h1>Firmas huesped</h1>
+	{% if user.is_authenticated %}
+	Welcome {{ user.first_name }} {{ user.last_name }} <a class="btn btn-primary" href="{% url 'firmas:logout' %}">Logout</a>
+	<p>{{ fb_uid }}</p>
+	<p><img src="http://graph.facebook.com/{{ fb_uid }}/picture" alt=""></p>
+	{% else %}
+	<a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Facebook</a>
+	{% endif %}
+</body>
+</html>

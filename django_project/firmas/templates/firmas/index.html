@@ -1,0 +1,131 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'firmas/css/bootstrap.min.css' %}" rel="stylesheet">
+     <link href="{% static 'firmas/css/main.css' %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+            
+              <a class="navbar-brand" href="index.html">Project name</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a data-toggle="modal" data-target="#myModal" href="#about"> ¿Que es La firma solidaria?</a></li>
+                <li><a data-toggle="contacto" data-target="#contacto" href="#contact">Contactanos</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>  
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="donaCaption">Doná tu firma de mail, Por cada mail que mandas la fundacion recibe una donación</h1>
+              <h1 class="sumate">Sumate!</h1>
+                <a class="btn btn-lg btn-primary  omb_btn-facebook" href="{% url 'social:begin' 'facebook' %}?next=/firma" role="button">Facebook</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'firmas/js/bootstrap.min.js' %}"></script>
+    <div class="aboutModal fade">
+  <!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">¿Que es La Firma Solidaria?</h4>
+      </div>
+      <div class="modal-body">
+       <p>
+
+Una manera distinta en la que podes ayudar.<br>
+
+Pero ayudar en serio.<br>
+
+Vas a donar un montón de plata sin poner un peso.<br>
+
+¿Qué?<br>
+
+Si eso.<br>
+
+Lo único que tenes que hacer es donar la firma de tu mail.<br>
+
+Cuando mandas un mail un anunciante que patrocina la fundación huésped aparecerá en tu firma.
+<br>
+De esta manera, cada vez que alguien reciba un mail tuyo los anunciantes aportaran una donación a la fundación.<br>
+
+Pensá en la cantidad de mails que mandamos por día.  Ahora imaginate la cantidad de ingresos que vas a generar para la fundación.</p>
+      </div>
+      <div class="modal-footer">
+       
+        <a href="{% url 'social:begin' 'facebook' %}?next=/firma" class="btn btn-primary">Me sumo!</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="contacto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Contacto</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <textarea class="form-control" rows="3" id="inputComentario"></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Me sumo!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </body>
+</html>

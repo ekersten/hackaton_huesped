@@ -1,0 +1,270 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+  font-family: 'Lato', sans-serif;
+}
+h2{
+  font-size: 25px;
+  border-bottom: 2px solid #ee2b44;
+  padding: 0 0 12px 10px;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,300italic);
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+   box-shadow: 0px 9px 11px #e32c6c;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+.navbar-nav{
+  float: right;
+}
+.navbar-inverse .navbar-nav>li>a{
+  color: #fff;
+
+}
+.navbar-inverse{
+  background: transparent;
+  border: none;
+}
+.navbar-brand{
+  background: url(../img/logoApp.png);
+  width: 200px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-indent: -5000px;  
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
+  background: transparent;
+}
+
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  top: 140px;
+}
+.sumate{
+  margin: 60px 0 20px 0;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+  background: -webkit-linear-gradient(#e32c6c, #f05342); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#e32c6c, #f05342); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#e32c6c, #f05342); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#e32c6c, #f05342); /* Standard syntax */
+}
+
+#myCarousel.innerHeader{
+    height: 200px;
+      box-shadow: 0px 0px 5px #888888 inset;
+}
+#myCarousel.innerHeader .item{
+    height: 200px;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+.mainDiv{
+  margin: 80px 0; 
+}
+.fade{
+  opacity: 1;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+/* FIRMA 1 */
+.itemFirma{
+  overflow: hidden;
+  position: relative;
+}
+.itemFirma.active{
+    box-shadow: 2px 1px 5px #888888;
+}
+.itemFirma.active .mask{
+  display: none;
+  opacity: 0.6;
+  background: #D3D3D3;
+  color: #373737;
+  position: absolute;
+  width: 100%;
+  /* height: 10%; */
+  display: block;
+  z-index: 1;
+  left: 0px;
+  /*
+  -ms-transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+  */
+  bottom: 0px;
+  padding: 2px 0;
+  text-align: center;
+  border-bottom: 2px solid #ee2b44;
+}
+}
+
+
+.firma1 .contenedorFirma{
+  width: 100%;
+  display: block;
+  border-right:3px solid #ee2b44;
+}
+.firma1 .textoFirma h4 span{
+  font-size: 14px;
+}
+.firma1 .textoFirma h4{
+  margin: 3px 0;
+}
+.firma1 .textoFirma span{
+   display: block;
+   font-size: 12px;
+}
+.firma1 .textoFirma .cargo{
+    margin: 3px 0 2px 0;
+ 
+}
+.firma2 {
+  text-align: center;
+}
+.firma2 .nombrePersonas{
+  font-weight: bold;
+  border-right:2px solid #ee2b44;
+  padding-right: 3px;
+  margin-right: 3px;
+}
+.firma2  span{
+  display: inline;
+  text-align: center;
+}
+.donaCaption{
+
+}
+.no-padding-left{
+  padding-left: 0;
+}
+.ad-firma{
+  margin: 10px 0 0 ;
+  clear: both;
+}
+.no-padding{
+  padding: 0;
+}
+.clearBoth{
+  clear: both;
+}
+.omb_btn-facebook {background: #3b5998;}
+.omb_btn-twitter {background: #00aced;}
