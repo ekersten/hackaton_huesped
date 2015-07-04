@@ -204,6 +204,7 @@ Pensá en la cantidad de mails que mandamos por día.  Ahora imaginate la cantid
             success: function (data) {
               $('#demoFirma').fadeIn();
               $('#demoFirma div').html(data);
+              $('#demoFirma div').html("<img src='"+data+"' />");
               $('#descargarFirma').addClass("dissabled");
             },
             dataType: 'html'

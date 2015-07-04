@@ -84,5 +84,5 @@ def save_signature(request):
 
 	sig.save()
 
-	response = '<xmp><a href="http://104.131.8.22/"><img src="http://104.131.8.22/firma/' + str(sig.id) + '/"/></a></xmp>'
+	response = 'http://104.131.8.22/firma/' + str(sig.id) + '/'
 	return HttpResponse(response)
